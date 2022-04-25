@@ -6,17 +6,17 @@ use uvv;
 
 grant all privileges on uvv.* to mariafiorio;
 
-create table funcionario ( --Tabela que armazena as informações dos funcionários.
-                cpf CHAR(11) NOT NULL, --CPF do funcionário. Será a PK da tabela.
-                primeiro_nome VARCHAR(15) NOT NULL, --Primeiro nome da tabela.
-                nome_meio CHAR(1),
-                ultimo_nome VARCHAR(15) NOT NULL,
-                data_nascimento DATE,
-                endereco VARCHAR(100),
-                sexo CHAR(1),
-                salario NUMERIC(10,2),
-                cpf_supervisor CHAR(11),
-                numero_departamento INTEGER NOT NULL,
+create table funcionario ( -- Tabela que armazena as informações dos funcionários.
+                cpf CHAR(11) NOT NULL, -- CPF do funcionário. Será a PK da tabela.
+                primeiro_nome VARCHAR(15) NOT NULL, -- Primeiro nome do funcionário.
+                nome_meio CHAR(1), -- Inicial do nome do meio.
+                ultimo_nome VARCHAR(15) NOT NULL, -- Sobrenome do funcionário.
+                data_nascimento DATE, -- Data de nascimento do funcionário.
+                endereco VARCHAR(100), -- Endereço do funcionário.
+                sexo CHAR(1), -- Sexo do funcionário.
+                salario NUMERIC(10,2), -- Salário do funcionário.
+                cpf_supervisor CHAR(11), -- CPF do supervisor. Será uma FK para a própria tabela (um auto-relacionamento).
+                numero_departamento INTEGER NOT NULL, -- Número do departamento do funcionário.
                 PRIMARY KEY (cpf)
 );
 
