@@ -6,9 +6,9 @@ use uvv;
 
 grant all privileges on uvv.* to mariafiorio;
 
-create table funcionario (
-                cpf CHAR(11) NOT NULL,
-                primeiro_nome VARCHAR(15) NOT NULL,
+create table funcionario ( --Tabela que armazena as informações dos funcionários.
+                cpf CHAR(11) NOT NULL, --CPF do funcionário. Será a PK da tabela.
+                primeiro_nome VARCHAR(15) NOT NULL, --Primeiro nome da tabela.
                 nome_meio CHAR(1),
                 ultimo_nome VARCHAR(15) NOT NULL,
                 data_nascimento DATE,
