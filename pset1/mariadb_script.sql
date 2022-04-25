@@ -1,12 +1,9 @@
-mysql -u root -p
-
-
 CREATE USER 'mariafiorio'@'%' IDENTIFIED BY '123';
 
-
-
 create database uvv;
+
 use uvv;
+
 grant all privileges on uvv.* to mariafiorio;
 
 create table funcionario (
