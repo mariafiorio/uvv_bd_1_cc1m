@@ -36,7 +36,7 @@ CREATE TABLE elmasri.funcionario (
 
 COMMENT ON TABLE elmasri.funcionario IS 'Tabela que armazena as informações dos funcionários.';
 COMMENT ON COLUMN elmasri.funcionario.cpf IS 'CPF do funcionário. Será a PK da tabela.';
-COMMENT ON COLUMN elmasri.funcionario.primeiro_nome IS 'Primeiro nome da tabela.';
+COMMENT ON COLUMN elmasri.funcionario.primeiro_nome IS 'Primeiro nome do funcionário.';
 COMMENT ON COLUMN elmasri.funcionario.nome_meio IS 'Inicial do nome do meio.';
 COMMENT ON COLUMN elmasri.funcionario.ultimo_nome IS 'Sobrenome do funcionário.';
 COMMENT ON COLUMN elmasri.funcionario.data_nascimento IS 'Data de nascimento do funcionário.';
