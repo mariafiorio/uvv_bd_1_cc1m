@@ -26,10 +26,10 @@ alter table funcionario
 
 
 create table departamento ( -- Tabela que armazenas as informações dos departamentos.
-                numero_departamento INTEGER NOT NULL,
-                nome_departamento VARCHAR(15) NOT NULL,
-                cpf_gerente CHAR(11) NOT NULL,
-                data_inicio_gerente DATE,
+                numero_departamento INTEGER NOT NULL, -- Número do departamento. É a PK desta tabela.
+                nome_departamento VARCHAR(15) NOT NULL, -- Nome do departamento. Deve ser único.
+                cpf_gerente CHAR(11) NOT NULL, -- CPF do gerente do departamento. É uma FK para tabela. funcionários.
+                data_inicio_gerente DATE, -- Data do início do gerente do departamento.
                 PRIMARY KEY (numero_departamento)
 );
 
@@ -37,11 +37,11 @@ create unique index departamento_idx
 on departamento 
 (nome_departamento);
 
-create table projeto (
-                numero_projeto INTEGER NOT NULL,
-                nome_projeto VARCHAR(15) NOT NULL,
-                local_projeto VARCHAR(15),
-                numero_departamento INTEGER NOT NULL,
+create table projeto ( -- Tabela que armazena as informações sobre os projetos dos departamentos.
+                numero_projeto INTEGER NOT NULL,-- Número do projeto. É a PK desta tabela.
+                nome_projeto VARCHAR(15) NOT NULL, -- Nome do projeto. Deve ser único.
+                local_projeto VARCHAR(15), -- Localização do projeto.
+                numero_departamento INTEGER NOT NULL, -- Número do departamento. É uma FK para a tabela departamento.
                 PRIMARY KEY (numero_projeto)
 );
 
@@ -52,30 +52,32 @@ create unique index projeto_idx
  ( nome_projeto );
 
 
-create table localizacoes_departamento (
-                numero_departamento INTEGER NOT NULL,
-                local VARCHAR(15) NOT NULL,
+create table localizacoes_departamento ( -- Tabela que armazena as possíveis localizações dos departamentos.
+                numero_departamento INTEGER NOT NULL, -- Número do departamento. Faz parte da PK desta tabela e também é uma FK  para a tabela departamento.
+                local VARCHAR(15) NOT NULL, -- Localização do departamento. Faz parte da PK desta tabela.
                 PRIMARY KEY (numero_departamento, local)
 );
 
 
 create table trabalha_em (
-                cpf_funcionario CHAR(11) NOT NULL,
-                numero_projeto INTEGER NOT NULL,
-                horas NUMERIC(3,1) NOT NULL,
+                cpf_funcionario CHAR(11) NOT NULL, -- Tabela para armazenar quais funcionários trabalham em quais projetos.
+                numero_projeto INTEGER NOT NULL, -- CPF do funcionário. Faz parte da PK desta tabela e é uma FK para a tabela funcionário.
+                horas NUMERIC(3,1) NOT NULL, -- Horas trabalhadas pelo funcionário neste projeto.
                 PRIMARY KEY (cpf_funcionario, numero_projeto)
 );
 
+
 create table dependente (
-                cpf_funcionario CHAR(11) NOT NULL,
-                nome_dependente VARCHAR(15) NOT NULL,
-                sexo CHAR(1),
-                data_nascimento DATE,
-                parentesco VARCHAR(15),
+                cpf_funcionario CHAR(11) NOT NULL, -- Tabela que armazena as informações dos dependentes e dos funcionários.
+                nome_dependente VARCHAR(15) NOT NULL, -- CPF do funcionário. Faz parte da PK desta tabela e é uma FK para a tabela funcionário.
+                sexo CHAR(1), -- Sexo do dependente.
+                data_nascimento DATE, -- Data de nascimento do dependente.
+                parentesco VARCHAR(15), -- Descrição do parentesco do dependente com o funcionário.
                 PRIMARY KEY (cpf_funcionario, nome_dependente)
 );
 
-
+alter table dependente -- Garante a restrição de resposta do campo para F ou M.
+add constraint check (sexo in ('M','F'));
 
 ALTER TABLE dependente ADD CONSTRAINT funcionario_dependente_fk
 FOREIGN KEY (cpf_funcionario)
