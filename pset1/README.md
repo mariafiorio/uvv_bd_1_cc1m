@@ -4,7 +4,7 @@
 > Turma: CC1M
 
 ## PSET 1 - Introdução
-##### Objetivos dos Problem Sets:
+##### Objetivos do Problem Sets:
 
 > - Aprender sobre sistemas de controles de versões e Markdown;
 > - Implementar projetos lógicos em diversos Sistemas de Gerenciamento de Bancos de Dados (SGBD), utilizando os  SGBD relacionais mais comuns e importantes hoje em dia: (PostgreSQL, MariaBD/MySQL e MS SQL Server);
