@@ -20,7 +20,7 @@ create table funcionario ( -- Tabela que armazena as informações dos funcioná
                 PRIMARY KEY (cpf)
 );
 
-alter table funcionario add constraint check (sexo in ('M','F'));
+alter table funcionario add constraint check (sexo in ('M','F')); -- Garante a restrição de resposta do campo para F ou M.
 
 
 
