@@ -1,16 +1,19 @@
 -- QUESTÃO 01: prepare um relatório que mostre a média salarial dos funcionários de cada departamento.
+
 SELECT numero_departamento as 'Numero_departamento', ROUND(AVG(salario) ,3) as MediaSalarial_departamento
 FROM funcionario 
 GROUP BY numero_departamento ;
 
 -- QUESTÃO 02: prepare um relatório que mostre a média salarial dos homens e das mulheres.
+
 SELECT ROUND(AVG(salario),3) as MediaSalarial_sexo,
 CASE WHEN sexo = 'F' then 'Mulheres'
 WHEN sexo = 'M' THEN 'Homens' END AS sexo
 FROM funcionario f GROUP BY sexo;
 
--- QUESTÃO 03: prepare um relatório que liste o nome dos departamentos e, para cada departamento, inclua as seguintes
--- informações de seus funcionários: o nome completo, a data de nascimento, a idade em anos completos e o salário.
+/*QUESTÃO 03: prepare um relatório que liste o nome dos departamentos e, para cada departamento, inclua as seguintes
+informações de seus funcionários: o nome completo, a data de nascimento, a idade em anos completos e o salário.*/
+
 SELECT 
 nome_departamento as 'Departamento', CONCAT(primeiro_nome,' ' ,nome_meio, ' ' ,ultimo_nome) as 'Nome Completo', data_nascimento as 'Data de Nascimento',YEAR(CURRENT_TIMESTAMP())-YEAR(data_nascimento) 
 as 'Idade', salario as 'Salário' 
@@ -60,22 +63,26 @@ FROM funcionario f INNER JOIN departamento do INNER JOIN projeto pro INNER JOIN 
 WHERE do.numero_departamento = f.numero_departamento AND
 pro.numero_projeto = t.numero_projeto AND
 f.cpf = t.cpf_funcionario
-ORDER BY nome_projeto ;
+ORDER BY nome_projeto;
 
 /*QUESTÃO 09: prepare um relatório que mostre a soma total das horas de cada
 projeto em cada departamento. Obs.: o relatório deve exibir o nome do departamento, o nome do projeto e a soma total das horas.*/
+
 SELECT nome_projeto as 'Projeto', nome_departamento as 'Departamento', sum(horas) as 'Horas trabalhadas'
 FROM departamento do INNER JOIN projeto pro INNER JOIN trabalha_em t
-WHERE do.numero_departamento = pro.numero_departamento AND pro.numero_projeto = t.numero_projeto GROUP BY nome_projeto
+WHERE do.numero_departamento = pro.numero_departamento AND pro.numero_projeto = t.numero_projeto GROUP BY nome_projeto;
 
 /*QUESTÃO 10: prepare um relatório que mostre a média salarial dos funcionários
 de cada departamento.*/
+
 SELECT numero_departamento as 'Numero_departamento', ROUND(AVG(salario) ,3) as MediaSalarial_departamento
 FROM funcionario 
-GROUP BY numero_departamento ;
+GROUP BY numero_departamento;
+
 /*QUESTÃO 11: considerando que o valor pago por hora trabalhada em um projeto
 é de 50 reais, prepare um relatório que mostre o nome completo do funcionário, o
 nome do projeto e o valor total que o funcionário receberá referente às horas trabalhadas naquele projeto.*/
+
 SELECT nome_projeto as 'Projeto', 
 CONCAT(f.primeiro_nome, ' ', nome_meio, ' ', ultimo_nome) as 'Funcionário', (horas * 50) as 'Valor Total'
 FROM funcionario f INNER JOIN projeto pro INNER JOIN  trabalha_em te 
@@ -85,6 +92,7 @@ WHERE pro.numero_projeto = te.numero_projeto AND f.cpf = te.cpf_funcionario ;
 nos projetos e percebeu que alguns funcionários, mesmo estando alocadas à algum
 projeto, não registraram nenhuma hora trabalhada. Sua tarefa é preparar um relatório que liste o nome do departamento, o nome do projeto e o nome dos funcionários
 que, mesmo estando alocados a algum projeto, não registraram nenhuma hora trabalhada.*/
+
 SELECT nome_departamento as 'Departamento', nome_projeto as 'Projeto', CONCAT(f.primeiro_nome, ' ', nome_meio, ' ', ultimo_nome) as 'Funcionário', horas as 'Horas trabalhadas' 
 from funcionario f inner join departamento do inner join projeto pro inner join trabalha_em t
 where do.numero_departamento = f.numero_departamento and
@@ -97,7 +105,6 @@ que você preparasse um relatório que listasse o nome completo das pessoas a se
 presenteadas (funcionários e dependentes), o sexo e a idade em anos completos
 (para poder comprar um presente adequado). Esse relatório deve estar ordenado
 pela idade em anos completos, de forma decrescente.*/
-
 
 SELECT CONCAT(f.primeiro_nome, ' ', nome_meio, ' ', ultimo_nome) as 'Pessoas presenteadas', f.sexo as Sexo, YEAR(CURRENT_TIMESTAMP())-YEAR(f.data_nascimento) as 'Idade'
 FROM funcionario f
