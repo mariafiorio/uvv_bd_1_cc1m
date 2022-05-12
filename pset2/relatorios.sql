@@ -34,10 +34,10 @@ reajuste deve ser de 20%, e se o salário atual do funcionário for igual ou sup
 /*QUESTÃO 05: prepare um relatório que liste, para cada departamento, o nome
 do gerente e o nome dos funcionários. Ordene esse relatório por nome do departamento (em ordem crescente) e por salário dos funcionários (em ordem decrescente).*/
 
-SELECT do.nome_departamento as 'Departamento', CONCAT(g.primeiro_nome,' ' ,nome_meio, ' ' ,ultimo_nome) as 'Gerente', CONCAT(f.primeiro_nome,' ' ,nome_meio, ' ' ,ultimo_nome) as funcionario, salario as 'salario do funcionário'
-FROM departamento do INNER JOIN funcionario f, 
-(SELECT primeiro_nome, cpf FROM funcionario f INNER JOIN departamento do WHERE f.cpf = do.cpf_gerente) as g
-WHERE f.numero_departamento = do.numero_departamento AND g.cpf = do.cpf_gerente ORDER BY do.nome_departamento asc, f.salario desc;
+SELECT nome_departamento as departamento, CONCAT(g.primeiro_nome) as gerente, CONCAT(f.primeiro_nome,' ' ,nome_meio, ' ' ,ultimo_nome) as funcionario, salario as 'salario do funcionário'
+from departamento do inner join funcionario f, 
+(select primeiro_nome, cpf from funcionario f inner join departamento d where f.cpf = d.cpf_gerente) as g
+where  f.numero_departamento = do.numero_departamento and g.cpf = do.cpf_gerente order by do.nome_departamento asc, f.salario desc;
 
 /*QUESTÃO 06: prepare um relatório que mostre o nome completo dos funcionários que têm dependentes, o departamento onde eles trabalham e, para cada funcionário, também liste o nome completo dos dependentes, a idade em anos de cada
 dependente e o sexo (o sexo NÃO DEVE aparecer como M ou F, deve aparecer
