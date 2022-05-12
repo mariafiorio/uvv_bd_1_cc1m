@@ -23,7 +23,16 @@ Pesquisa         |Ronaldo K Lima  |     1962-09-15|   60|  38.00|
 Pesquisa         |Fernando T Wong |     1955-08-12|   67|  40.00|
 Pesquisa         |Joice A Leite   |     1972-07-31|   50|  25.00|
 #### QUESTÃO 04: prepare um relatório que mostre o nome completo dos funcionários, a idade em anos completos, o salário atual e o salário com um reajuste que obedece ao seguinte critério: se o salário atual do funcionário é inferior a 35.000 o reajuste deve ser de 20%, e se o salário atual do funcionário for igual ou superior a 35.000 o reajuste deve ser de 15%.
-
+Nome Completo   |Idade|Salario|Salario Reajustado|
+----------------|-----|-------|------------------|
+João B Silva    |   57|  30.00|           36.0000|
+Fernando T Wong |   67|  40.00|           46.0000|
+Joice A Leite   |   50|  25.00|           30.0000|
+Ronaldo K Lima  |   60|  38.00|           43.7000|
+Jorge E Brito   |   85|  55.00|           63.2500|
+Jennifer S Souza|   81|  43.00|           49.4500|
+André V Pereira |   53|  25.00|           30.0000|
+Alice J Zelaya  |   54|  25.00|           30.0000|
 #### QUESTÃO 05: prepare um relatório que liste, para cada departamento, o nome do gerente e o nome dos funcionários. Ordene esse relatório por nome do departamento (em ordem crescente) e por salário dos funcionários (em ordem decrescente).
 departamento |gerente           |funcionario     |salario do funcionário|
 -------------|------------------|----------------|----------------------|
