@@ -40,16 +40,18 @@ Jennifer S Souza|   81|  43.00|           49.4500|
 André V Pereira |   53|  25.00|           30.0000|
 Alice J Zelaya  |   54|  25.00|           30.0000|
 #### QUESTÃO 05: prepare um relatório que liste, para cada departamento, o nome do gerente e o nome dos funcionários. Ordene esse relatório por nome do departamento (em ordem crescente) e por salário dos funcionários (em ordem decrescente).
-departamento |gerente           |funcionario     |salario do funcionário|
+departamento |gerente           |funcionário     |salario do funcionário|
 -------------|------------------|----------------|----------------------|
-Administração|Jennifer S Souza  |Jennifer S Souza|                 43.00|
-Administração|Jennifer B Silva  |João B Silva    |                 30.00|
-Administração|Jennifer J Zelaya |Alice J Zelaya  |                 25.00|
-Administração|Jennifer V Pereira|André V Pereira |                 25.00|
-Matriz       |Jorge E Brito     |Jorge E Brito   |                 55.00|
-Pesquisa     |Fernando T Wong   |Fernando T Wong |                 40.00|
-Pesquisa     |Fernando K Lima   |Ronaldo K Lima  |                 38.00|
-Pesquisa     |Fernando A Leite  |Joice A Leite   |                 25.00|
+Administração|Jennifer   |Jennifer S Souza|                 43.00|
+Administração|Jennifer   |João B Silva    |                 30.00|
+Administração|Jennifer   |Alice J Zelaya  |                 25.00|
+Administração|Jennifer   |André V Pereira |                 25.00|
+Matriz       |Jorge      |Jorge E Brito   |                 55.00|
+Pesquisa     |Fernando   |Fernando T Wong |                 40.00|
+Pesquisa     |Fernando   |Ronaldo K Lima  |                 38.00|
+Pesquisa     |Fernando   |Joice A Leite   |                 25.00|
+
+
 #### QUESTÃO 06: prepare um relatório que mostre o nome completo dos funcionários que têm dependentes, o departamento onde eles trabalham e, para cada funcionário, também liste o nome completo dos dependentes, a idade em anos de cada dependente e o sexo (o sexo NÃO DEVE aparecer como M ou F, deve aparecer como “Masculino” ou “Feminino”).
 Nome do funcionário|Departamento |Nome do dependente|Idade do dependente|Sexo do dependente|
 -------------------|-------------|------------------|-------------------|------------------|
