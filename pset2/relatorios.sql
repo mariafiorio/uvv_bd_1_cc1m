@@ -25,7 +25,10 @@ ORDER BY nome_departamento;
 obedece ao seguinte critério: se o salário atual do funcionário é inferior a 35.000 o
 reajuste deve ser de 20%, e se o salário atual do funcionário for igual ou superior a
 35.000 o reajuste deve ser de 15%.*/
-
+ 
+ SELECT CONCAT(primeiro_nome,' ' ,nome_meio, ' ' ,ultimo_nome) as 'Nome Completo', YEAR(CURRENT_TIMESTAMP())-YEAR(data_nascimento) as 'Idade', salario as 'Salario',
+ if (salario < 35.000, salario * 1.2, salario * 1.15) as 'Salario Reajustado'
+ FROM funcionario;
 
 /*QUESTÃO 05: prepare um relatório que liste, para cada departamento, o nome
 do gerente e o nome dos funcionários. Ordene esse relatório por nome do departamento (em ordem crescente) e por salário dos funcionários (em ordem decrescente).*/
