@@ -1,8 +1,9 @@
 -- QUESTÃO 01: prepare um relatório que mostre a média salarial dos funcionários de cada departamento.
 
-SELECT numero_departamento as 'Numero_departamento', ROUND(AVG(salario) ,3) as MediaSalarial_departamento
-FROM funcionario 
+SELECT numero_departamento as 'Departamento', ROUND(AVG(salario) ,3) as 'Media Salarial'
+from funcionario 
 GROUP BY numero_departamento ;
+ 
 
 -- QUESTÃO 02: prepare um relatório que mostre a média salarial dos homens e das mulheres.
 
@@ -78,9 +79,10 @@ WHERE do.numero_departamento = pro.numero_departamento AND pro.numero_projeto = 
 /*QUESTÃO 10: prepare um relatório que mostre a média salarial dos funcionários
 de cada departamento.*/
 
-SELECT numero_departamento as 'Numero_departamento', ROUND(AVG(salario) ,3) as MediaSalarial_departamento
-FROM funcionario 
-GROUP BY numero_departamento;
+SELECT numero_departamento as 'Departamento', ROUND(AVG(salario) ,3) as 'Media Salarial'
+from funcionario 
+GROUP BY numero_departamento ;
+ 
 
 /*QUESTÃO 11: considerando que o valor pago por hora trabalhada em um projeto
 é de 50 reais, prepare um relatório que mostre o nome completo do funcionário, o
