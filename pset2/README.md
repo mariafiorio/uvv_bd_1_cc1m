@@ -1,3 +1,9 @@
+> Este PSet-2 depende totalmente do PSet-1 e tem como objetivo gerar diversos
+relatórios SQL a partir dos dados inseridos no banco de dados criado no
+primeiro PSet. Assim, praticando consultas e subconsultas em SQL.
+
+
+
 #### QUESTÃO 01: prepare um relatório que mostre a média salarial dos funcionários de cada departamento.
 | Departamento | Media Salarial |
 | ----------- | ----------- |
