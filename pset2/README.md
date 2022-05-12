@@ -1,9 +1,11 @@
 #### QUESTÃO 01: prepare um relatório que mostre a média salarial dos funcionários de cada departamento.
-|Departamento|Media Salarial|
-|------------|--------------|
-            1|        55.000|
-            4|        30.750|
-            5|        34.333|
+| Departamento | Media Salarial |
+| ----------- | ----------- |
+| 1 | 55.000 |
+| 4 |    30.750 |
+|5  | 34.333|
+
+
 #### QUESTÃO 02: prepare um relatório que mostre a média salarial dos homens e das mulheres.
 sexo|MediaSalarial_sexo|
 ----|------------------|
@@ -73,11 +75,11 @@ ProdutoY       |Pesquisa     |             37.5|
 ProdutoZ       |Pesquisa     |             50.0|
 Reorganização  |Matriz       |             25.0|
 #### QUESTÃO 10: prepare um relatório que mostre a média salarial dos funcionários de cada departamento.
-Departamento       |Media Salarial|
--------------------|-------------------------|
-                  1|                   55.000|
-                  4|                   30.750|
-                  5|                   34.333|
+| Departamento | Media Salarial |
+| ----------- | ----------- |
+| 1 | 55.000 |
+| 4 |    30.750 |
+|5  | 34.333|
 #### QUESTÃO 11: considerando que o valor pago por hora trabalhada em um projeto é de 50 reais, prepare um relatório que mostre o nome completo do funcionário, o nome do projeto e o valor total que o funcionário receberá referente às horas trabalhadas naquele projeto.
 Projeto        |Funcionário     |Valor Total|
 ---------------|----------------|-----------|
@@ -103,7 +105,7 @@ Departamento|Projeto      |Funcionário  |Horas trabalhadas|
 Matriz      |Reorganização|Jorge E Brito|              0.0|
 #### QUESTÃO 13: durante o natal deste ano a empresa irá presentear todos os funcionários e todos os dependentes (sim, a empresa vai dar um presente para cada funcionário e um presente para cada dependente de cada funcionário) e pediu para que você preparasse um relatório que listasse o nome completo das pessoas a serem presenteadas (funcionários e dependentes), o sexo e a idade em anos completos (para poder comprar um presente adequado). Esse relatório deve estar ordenado pela idade em anos completos, de forma decrescente.
 Pessoas presenteadas|Sexo|Idade|
---------------------+----+-----+
+--------------------|----|-----|
 Jorge E Brito       |M   |   85|
 Jennifer S Souza    |F   |   81|
 Antonio             |M   |   80|
@@ -119,11 +121,12 @@ ELizabeth           |F   |   36|
 Michael             |M   |   36|
 Alicia              |F   |   36|
 #### QUESTÃO 14: prepare um relatório que exiba quantos funcionários cada departamento tem.
-Qtd de funcionários|Departamento |
--------------------|-------------|
-                  4|Administração|
-                  3|Pesquisa     |
-                  1|Matriz       |
+| Qtd de funcionários | Departamento |
+| ----------- | ----------- |
+| 4 | Administração |
+| 3 |    Pesquisa |
+| 1 | Matriz|
+
 #### QUESTÃO 15: como um funcionário pode estar alocado em mais de um projeto, prepare um relatório que exiba o nome completo do funcionário, o departamento desse funcionário e o nome dos projetos em que cada funcionário está alocado. Atenção: se houver algum funcionário que não está alocado em nenhum projeto, o nome completo e o departamento também devem aparecer no relatório.
 Nome Completo   |Departamento |Projetos       |
 ----------------|-------------|---------------|
